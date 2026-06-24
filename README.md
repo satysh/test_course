@@ -22,7 +22,62 @@ student_preprocessing_tasks.ipynb
 ilyas_student_preprocessing_tasks.ipynb
 ```
 
-Работу нужно выполнять в своём персональном ноутбуке. После завершения задания студент добавляет свой ноутбук в репозиторий и вливает изменения в ветку `main`.
+Работу нужно выполнять в своём персональном ноутбуке. Изменения в `main` напрямую не пушим: готовое задание сдаётся через Pull Request.
+
+### Пошагово
+
+1. Склонировать репозиторий:
+
+```bash
+git clone git@github.com:satysh/test_course.git
+cd test_course
+```
+
+2. Обновить локальную ветку `main`:
+
+```bash
+git switch main
+git pull
+```
+
+3. Создать свою ветку для задания:
+
+```bash
+git switch -c ilyas-task-1
+```
+
+Замените `ilyas` на своё имя.
+
+4. Создать персональную копию ноутбука:
+
+```bash
+cp student_preprocessing_tasks.ipynb ilyas_student_preprocessing_tasks.ipynb
+```
+
+Замените `ilyas` на своё имя. Исходный `student_preprocessing_tasks.ipynb` не изменяйте.
+
+5. Выполнить задание в своём ноутбуке.
+
+6. Добавить, закоммитить и запушить свою ветку:
+
+```bash
+git add ilyas_student_preprocessing_tasks.ipynb
+git commit -m "Add Ilyas preprocessing task"
+git push -u origin ilyas-task-1
+```
+
+7. На GitHub открыть Pull Request:
+
+- открыть страницу репозитория;
+- нажать `Compare & pull request` для своей ветки;
+- base branch: `main`;
+- compare branch: ваша ветка, например `ilyas-task-1`;
+- в описании кратко написать, что сделано;
+- создать Pull Request.
+
+8. После проверки Pull Request будет влит в `main`.
+
+Если нужно внести исправления после комментариев, продолжайте работать в той же ветке, делайте новые коммиты и снова пушьте. Pull Request обновится автоматически.
 
 ## Структура
 
